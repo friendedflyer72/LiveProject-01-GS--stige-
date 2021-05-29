@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7COpen+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic%7CMontserrat+Alternates:300,300italic,regular,italic,500,500italic,600,600italic,700,700italic%7CDM+Sans:regular,italic,500,500italic,700,700italic&amp;subset=cyrillic,cyrillic-ext,latin,latin-ext,vietnamese,latin,latin-ext"
+        media="all">
+    <title>Growthschool</title>
+</head>
+
+<body class="body-1">
+    <!-- Container -->
+    <div class="container-5 w-container">
+        <!-- Divider -->
+        <div class="div-block-01"></div>
+        <!-- H1 -->
+        <h1 class="heading">Category of Growth Hacks</h1>
+        <!-- Text-Block -->
+        <div class="text-block">The growth hack you will receive everyday are not just focussed on one specific category/ channel but everything that leads to every growth hackers north star.</div>
+        <div class="div-block-02"></div>
+        <!-- Blocks -->
+        <div class="div-block-90">
+            <h6 class="heading-29">🤯 Growth Hacks</h6>
+            <h6 class="heading-29">😯 Landing Pages</h6>
+            <h6 class="heading-29">😎 Social Media Marketing</h6>
+            <h6 class="heading-29">🤩 Influencers</h6>
+            <h6 class="heading-29">🤔 Content Creation</h6>
+        </div>
+        <div class="div-block-90">
+            <h6 class="heading-29">📧 Email Marketing</h6>
+            <h6 class="heading-29">🤓 Case Studies</h6>
+            <h6 class="heading-29">🧐 SEO</h6>
+        </div>
+        <div class="div-block-90">
+            <h6 class="heading-29">🥰 Community</h6>
+            <h6 class="heading-29">😇 Acquisitions</h6>
+            <h6 class="heading-29">🤑 Revenue<br></h6>
+            <h6 class="heading-29">🥳 Google Ads</h6>
+            <h6 class="heading-29">🤭 PPC</h6>
+        </div>
+        <div class="div-block-90">
+            <h6 class="heading-29">🥳 Google Analytics</h6>
+            <h6 class="heading-29">😉 Copywriting</h6>
+            <h6 class="heading-29">🥺 Activation<br></h6>
+        </div>
+        <div class="div-block-90">
+            <h6 class="heading-29">😁 App Store Optimisation</h6>
+            <h6 class="heading-29">🤨 Referral</h6>
+        </div>
+        <div class="div-block-127">
+            <h6 class="cat-title" style="display: inline-block;">😯 Landing Pages</h6>
+            <h6 class="cat-title" style="display: inline-block;">🤭 PPC</h6>
+            <h6 class="cat-title" style="display: inline-block;">🥳 Google Ads</h6>
+            <h6 class="cat-title" style="display: inline-block;">🤯 Growth Hacks</h6>
+            <h6 class="cat-title" style="display: inline-block;">🤔 Content Creation</h6>
+            <h6 class="cat-title" style="display: inline-block;">🤨 Referral</h6>
+            <h6 class="cat-title" style="display: inline-block;">😇 Acquisitions</h6>
+            <h6 class="cat-title" style="display: inline-block;">🤓 Case Studies</h6>
+            <h6 class="cat-title" style="display: none;">📧 Email Marketing</h6>
+            <h6 class="cat-title" style="display: none;">🤑 Revenue<br></h6>
+            <h6 class="cat-title" style="display: none;">🥰 Community</h6>
+            <h6 class="cat-title" style="display: none;">😉 Copywriting</h6>
+            <h6 class="cat-title" style="display: none;">🥺 Activation<br></h6>
+            <h6 class="cat-title" style="display: none;">🥳 Google Analytics</h6>
+            <h6 class="cat-title" style="display: none;">🤩 Influencers</h6>
+            <h6 class="cat-title" style="display: none;">🧐 SEO</h6>
+            <h6 class="cat-title" style="display: none;">😎 Social Media Marketing</h6>
+            <h6 class="cat-title" style="display: none;">😁 App Store Optimisation</h6>
+        </div>
+        <div class="div-block-126 dnb">
+            <button class="view-btn">
+          View All
+          <img src="https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/602669993c812cc13ed580e7_Vector%20(3).svg" loading="lazy" alt="" class="image-60">
+        </button>
+        </div>
+        <!-- Divider -->
+        <div class="div-block-88"></div>
+    </div>
+    <!-- Script -->
+    <script>
+        const listnames = document.querySelectorAll('.cat-title');
+        const viewbtn = document.querySelector('.view-btn');
+
+        let listlen = listnames.length;
+        let initial = 8;
+        let visible = initial;
+
+        function viewList(len) {
+            for (var j = 0; j < initial; j++) {
+                listnames[j].style.display = 'none';
+            }
+            for (var i = 0; i < len; i++) {
+                listnames[i].style.display = 'inline-block';
+            }
+        }
+
+        function hidebtn() {
+            if (visible >= listlen) {
+                visible = listlen;
+                viewbtn.style.display = 'none';
+            } else {
+                viewbtn.style.display = '';
+            }
+        }
+
+        viewbtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            visible += 4;
+            hidebtn();
+            viewList(visible);
+        });
+    </script>
+</body>
+
+</html>
